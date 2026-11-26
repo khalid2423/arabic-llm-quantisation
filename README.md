@@ -18,3 +18,9 @@ Open the notebook in Colab, select a T4 GPU under **Runtime → Change runtime t
 On one Tesla T4, FP16 had the highest output throughput. Custom 8-bit reduced model-load GPU memory by about 42% and matched FP16's score on the 30-question sample. Custom 4-bit saved about 63% of model-load GPU memory and scored 3/30. Sixteen of its replies did not follow the single-letter answer format and were counted as incorrect.
 
 Timing used five sequential Arabic prompts after one warm-up request. Accuracy was measured on a 30-question [ArabicMMLU](https://huggingface.co/datasets/MBZUAI/ArabicMMLU) sample. The running-server memory measurement includes vLLM allocations such as the KV cache.
+
+## Report and charts
+
+[Benchmark report and charts (HTML)](arabic-llm-quantisation-report.html)
+
+Download the HTML file and open it in a browser to view the charts. The report shows the initial run, while the table above shows the rerun in a fresh Colab session.
